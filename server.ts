@@ -1,58 +1,48 @@
-// server.ts - Next.js Standalone + Socket.IO
-import { setupSocket } from '@/lib/socket';
+// server.ts - Next.js custom server with Socket.IO (Mac-friendly)
 import { createServer } from 'http';
 import { Server } from 'socket.io';
 import next from 'next';
+import { setupSocket } from '@/lib/socket';
 
 const dev = process.env.NODE_ENV !== 'production';
-const currentPort = 3000;
-const hostname = '0.0.0.0';
+const port = process.env.PORT ? parseInt(process.env.PORT) : 3000;
+const hostname = 'localhost';
 
-// Custom server with Socket.IO integration
-async function createCustomServer() {
+async function startServer() {
   try {
-    // Create Next.js app
-    const nextApp = next({ 
-      dev,
-      dir: process.cwd(),
-      // In production, use the current directory where .next is located
-      conf: dev ? undefined : { distDir: './.next' }
+    // Initialize Next.js app
+    const app = next({ dev });
+    const handle = app.getRequestHandler();
+
+    await app.prepare();
+
+    // Create HTTP server
+    const httpServer = createServer(async (req, res) => {
+      // Let Next.js handle everything
+      await handle(req, res);
     });
 
-    await nextApp.prepare();
-    const handle = nextApp.getRequestHandler();
-
-    // Create HTTP server that will handle both Next.js and Socket.IO
-    const server = createServer((req, res) => {
-      // Skip socket.io requests from Next.js handler
-      if (req.url?.startsWith('/api/socketio')) {
-        return;
-      }
-      handle(req, res);
-    });
-
-    // Setup Socket.IO
-    const io = new Server(server, {
+    // Initialize Socket.IO
+    const io = new Server(httpServer, {
       path: '/api/socketio',
       cors: {
-        origin: "*",
-        methods: ["GET", "POST"]
-      }
+        origin: '*',
+        methods: ['GET', 'POST'],
+      },
     });
 
+    // Setup socket event handlers
     setupSocket(io);
 
-    // Start the server
-    server.listen(currentPort, hostname, () => {
-      console.log(`> Ready on http://${hostname}:${currentPort}`);
-      console.log(`> Socket.IO server running at ws://${hostname}:${currentPort}/api/socketio`);
+    // Start listening
+    httpServer.listen(port, hostname, () => {
+      console.log(`✅ Server ready on http://${hostname}:${port}`);
+      console.log(`⚡ Socket.IO running at ws://${hostname}:${port}/api/socketio`);
     });
-
-  } catch (err) {
-    console.error('Server startup error:', err);
+  } catch (error) {
+    console.error('❌ Server startup failed:', error);
     process.exit(1);
   }
 }
 
-// Start the server
-createCustomServer();
+startServer();

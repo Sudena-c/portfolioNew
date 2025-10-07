@@ -428,7 +428,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="font-semibold text-slate-900" style={{ fontFamily: 'Inter, sans-serif' }}>Email</p>
-                    <p className="text-slate-600" style={{ fontFamily: 'Inter, sans-serif' }}>hello@designportfolio.com</p>
+                    <p className="text-slate-600" style={{ fontFamily: 'Inter, sans-serif' }}>sudena.swork@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
@@ -512,7 +512,7 @@ export default function Home() {
               I'd love to hear from you!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="mailto:hello@designportfolio.com" className="px-8 py-4 bg-white text-slate-800 font-medium rounded-xl hover:bg-slate-50 transition-colors flex items-center justify-center gap-2" style={{ fontFamily: 'Inter, sans-serif' }}>
+              <a href="mailto:sudena.swork@gmail.com" className="px-8 py-4 bg-white text-slate-800 font-medium rounded-xl hover:bg-slate-50 transition-colors flex items-center justify-center gap-2" style={{ fontFamily: 'Inter, sans-serif' }}>
                 <span>📧</span>
                 Write an Email
               </a>
@@ -565,7 +565,7 @@ export default function Home() {
             <div>
               <h4 className="font-semibold mb-4" style={{ fontFamily: 'Inter, sans-serif' }}>Connect</h4>
               <div className="flex space-x-4 mb-4">
-                <a href="mailto:hello@designportfolio.com" className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center transition-colors" style={{ hoverBackgroundColor: '#14b8a6' }}>
+                <a href="mailto:sudena.swork@gmail.com" className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center transition-colors" style={{ hoverBackgroundColor: '#14b8a6' }}>
                   <span>📧</span>
                 </a>
                 <a href="https://linkedin.com" className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center transition-colors" style={{ hoverBackgroundColor: '#14b8a6' }}>
@@ -579,7 +579,7 @@ export default function Home() {
                 </a>
               </div>
               <p className="text-slate-400" style={{ fontFamily: 'Inter, sans-serif' }}>
-                hello@designportfolio.com
+                sudena.swork@gmail.com
               </p>
             </div>
           </div>
