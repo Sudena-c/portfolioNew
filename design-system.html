@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design System - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* ===== DESIGN SYSTEM ===== */
+        
+        /* Typography */
+        :root {
+            /* Font Families */
+            --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            
+            /* Color Palette */
+            --color-primary: #2563eb;          /* Blue 600 */
+            --color-primary-light: #dbeafe;    /* Blue 100 */
+            --color-secondary: #64748b;        /* Slate 500 */
+            --color-accent: #f59e0b;           /* Amber 500 */
+            --color-accent-light: #fef3c7;     /* Amber 100 */
+            --color-background: #ffffff;       /* White */
+            --color-surface: #f8fafc;          /* Slate 50 */
+            --color-text-primary: #0f172a;     /* Slate 900 */
+            --color-text-secondary: #475569;   /* Slate 600 */
+            --color-text-muted: #94a3b8;       /* Slate 400 */
+            --color-border: #e2e8f0;           /* Slate 200 */
+            --color-success: #10b981;          /* Emerald 500 */
+            --color-error: #ef4444;            /* Red 500 */
+            
+            /* Spacing System */
+            --space-xs: 0.25rem;    /* 4px */
+            --space-sm: 0.5rem;     /* 8px */
+            --space-md: 1rem;       /* 16px */
+            --space-lg: 1.5rem;     /* 24px */
+            --space-xl: 2rem;       /* 32px */
+            --space-2xl: 3rem;      /* 48px */
+            --space-3xl: 4rem;      /* 64px */
+            
+            /* Border Radius */
+            --radius-sm: 0.25rem;   /* 4px */
+            --radius-md: 0.5rem;    /* 8px */
+            --radius-lg: 0.75rem;   /* 12px */
+            --radius-xl: 1rem;      /* 16px */
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            
+            /* Transitions */
+            --transition-fast: 150ms ease;
+            --transition-normal: 250ms ease;
+            --transition-slow: 350ms ease;
+        }
+        
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text-primary);
+            background-color: var(--color-background);
+            line-height: 1.6;
+        }
+        
+        /* Typography Scale */
+        h1 { 
+            font-family: var(--font-heading);
+            font-size: 3rem; 
+            font-weight: 700; 
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+        
+        h2 { 
+            font-family: var(--font-heading);
+            font-size: 2.25rem; 
+            font-weight: 600; 
+            line-height: 1.3;
+            letter-spacing: -0.01em;
+        }
+        
+        h3 { 
+            font-family: var(--font-heading);
+            font-size: 1.875rem; 
+            font-weight: 600; 
+            line-height: 1.3;
+        }
+        
+        h4 { 
+            font-family: var(--font-heading);
+            font-size: 1.5rem; 
+            font-weight: 600; 
+            line-height: 1.4;
+        }
+        
+        h5 { 
+            font-family: var(--font-heading);
+            font-size: 1.25rem; 
+            font-weight: 500; 
+            line-height: 1.4;
+        }
+        
+        h6 { 
+            font-family: var(--font-heading);
+            font-size: 1.125rem; 
+            font-weight: 500; 
+            line-height: 1.4;
+        }
+        
+        p {
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.6;
+            color: var(--color-text-secondary);
+        }
+        
+        .text-large {
+            font-size: 1.125rem;
+            line-height: 1.7;
+        }
+        
+        .text-small {
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+        
+        .text-caption {
+            font-size: 0.75rem;
+            line-height: 1.4;
+            color: var(--color-text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        /* Button Styles */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--space-sm) var(--space-lg);
+            border: none;
+            border-radius: var(--radius-md);
+            font-family: var(--font-body);
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            white-space: nowrap;
+        }
+        
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--color-text-primary);
+            border: 1px solid var(--color-border);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--color-surface);
+            border-color: var(--color-secondary);
+        }
+        
+        .btn-accent {
+            background-color: var(--color-accent);
+            color: white;
+        }
+        
+        .btn-accent:hover {
+            background-color: #d97706;
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .btn-sm {
+            padding: var(--space-xs) var(--space-md);
+            font-size: 0.875rem;
+        }
+        
+        .btn-lg {
+            padding: var(--space-md) var(--space-xl);
+            font-size: 1.125rem;
+        }
+        
+        /* Card Styles */
+        .card {
+            background-color: var(--color-background);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: all var(--transition-normal);
+        }
+        
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--color-primary-light);
+        }
+        
+        .card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: var(--color-surface);
+        }
+        
+        .card-content {
+            padding: var(--space-lg);
+        }
+        
+        .card-title {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: var(--space-sm);
+            color: var(--color-text-primary);
+        }
+        
+        .card-description {
+            color: var(--color-text-secondary);
+            margin-bottom: var(--space-md);
+        }
+        
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: var(--space-md);
+            border-top: 1px solid var(--color-border);
+        }
+        
+        /* Form Elements */
+        .form-group {
+            margin-bottom: var(--space-lg);
+        }
+        
+        .form-label {
+            display: block;
+            font-family: var(--font-body);
+            font-weight: 500;
+            margin-bottom: var(--space-xs);
+            color: var(--color-text-primary);
+        }
+        
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: var(--space-sm) var(--space-md);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: all var(--transition-fast);
+            background-color: var(--color-background);
+        }
+        
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px var(--color-primary-light);
+        }
+        
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-lg);
+        }
+        
+        .section {
+            padding: var(--space-3xl) 0;
+        }
+        
+        .grid {
+            display: grid;
+            gap: var(--space-lg);
+        }
+        
+        .grid-cols-1 { grid-template-columns: 1fr; }
+        .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+        .grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+        .grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+        
+        /* Design System Preview Styles */
+        .design-system {
+            background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-background) 100%);
+            min-height: 100vh;
+        }
+        
+        .header {
+            text-align: center;
+            padding: var(--space-3xl) 0;
+            border-bottom: 1px solid var(--color-border);
+        }
+        
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: var(--space-lg);
+            color: var(--color-text-primary);
+        }
+        
+        .color-palette {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-md);
+            margin-bottom: var(--space-2xl);
+        }
+        
+        .color-swatch {
+            height: 120px;
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: flex-end;
+            padding: var(--space-md);
+            color: white;
+            font-weight: 500;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+            transition: transform var(--transition-fast);
+        }
+        
+        .color-swatch:hover {
+            transform: scale(1.05);
+        }
+        
+        .color-info {
+            margin-top: var(--space-sm);
+            padding: var(--space-sm);
+            background: var(--color-surface);
+            border-radius: var(--radius-md);
+        }
+        
+        .component-showcase {
+            background: var(--color-background);
+            border-radius: var(--radius-xl);
+            padding: var(--space-2xl);
+            margin-bottom: var(--space-2xl);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .button-showcase {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .card-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-lg);
+        }
+        
+        .typography-showcase {
+            margin-bottom: var(--space-xl);
+        }
+        
+        .typography-example {
+            margin-bottom: var(--space-lg);
+            padding: var(--space-lg);
+            background: var(--color-surface);
+            border-radius: var(--radius-md);
+        }
+        
+        .spacing-showcase {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            margin-bottom: var(--space-md);
+        }
+        
+        .spacing-box {
+            background: var(--color-primary);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 500;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 var(--space-md);
+            }
+            
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.75rem; }
+            h3 { font-size: 1.5rem; }
+            
+            .grid-cols-2,
+            .grid-cols-3,
+            .grid-cols-4 {
+                grid-template-columns: 1fr;
+            }
+            
+            .button-showcase {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body class="design-system">
+    <div class="container">
+        <header class="header">
+            <h1>Design System</h1>
+            <p class="text-large">A minimal, modern design system for your portfolio website</p>
+        </header>
+        
+        <section class="section">
+            <h2 class="section-title">🎨 Color Palette</h2>
+            <div class="color-palette">
+                <div>
+                    <div class="color-swatch" style="background-color: var(--color-primary);">
+                        Primary
+                    </div>
+                    <div class="color-info">
+                        <div class="text-caption">PRIMARY</div>
+                        <div>#2563eb</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="color-swatch" style="background-color: var(--color-secondary);">
+                        Secondary
+                    </div>
+                    <div class="color-info">
+                        <div class="text-caption">SECONDARY</div>
+                        <div>#64748b</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="color-swatch" style="background-color: var(--color-accent);">
+                        Accent
+                    </div>
+                    <div class="color-info">
+                        <div class="text-caption">ACCENT</div>
+                        <div>#f59e0b</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="color-swatch" style="background-color: var(--color-text-primary); color: white;">
+                        Text Primary
+                    </div>
+                    <div class="color-info">
+                        <div class="text-caption">TEXT PRIMARY</div>
+                        <div>#0f172a</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="color-swatch" style="background-color: var(--color-surface); color: var(--color-text-primary); border: 1px solid var(--color-border);">
+                        Surface
+                    </div>
+                    <div class="color-info">
+                        <div class="text-caption">SURFACE</div>
+                        <div>#f8fafc</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title">📝 Typography</h2>
+            <div class="component-showcase">
+                <div class="typography-showcase">
+                    <div class="typography-example">
+                        <h1>Heading 1 - Main Title</h1>
+                        <p class="text-caption">Space Grotesk - 3rem / 700 weight</p>
+                    </div>
+                    <div class="typography-example">
+                        <h2>Heading 2 - Section Title</h2>
+                        <p class="text-caption">Space Grotesk - 2.25rem / 600 weight</p>
+                    </div>
+                    <div class="typography-example">
+                        <h3>Heading 3 - Subsection</h3>
+                        <p class="text-caption">Space Grotesk - 1.875rem / 600 weight</p>
+                    </div>
+                    <div class="typography-example">
+                        <h4>Heading 4 - Card Title</h4>
+                        <p class="text-caption">Space Grotesk - 1.5rem / 600 weight</p>
+                    </div>
+                    <div class="typography-example">
+                        <h5>Heading 5 - Small Title</h5>
+                        <p class="text-caption">Space Grotesk - 1.25rem / 500 weight</p>
+                    </div>
+                    <div class="typography-example">
+                        <h6>Heading 6 - Micro Title</h6>
+                        <p class="text-caption">Space Grotesk - 1.125rem / 500 weight</p>
+                    </div>
+                    <div class="typography-example">
+                        <p>This is body text using Inter font. It's clean, readable, and perfect for longer content. The font provides excellent readability at various sizes and works well for both headings and body text when paired with Space Grotesk.</p>
+                        <p class="text-caption">Inter - 1rem / 400 weight</p>
+                    </div>
+                    <div class="typography-example">
+                        <p class="text-large">This is large body text for emphasis or important information. It maintains readability while drawing attention.</p>
+                        <p class="text-caption">Inter - 1.125rem / 400 weight</p>
+                    </div>
+                    <div class="typography-example">
+                        <p class="text-small">This is small text for captions, metadata, or secondary information.</p>
+                        <p class="text-caption">Inter - 0.875rem / 400 weight</p>
+                    </div>
+                    <div class="typography-example">
+                        <p class="text-caption">THIS IS CAPTION TEXT</p>
+                        <p class="text-caption">Inter - 0.75rem / 400 weight / Uppercase</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title">🔘 Buttons</h2>
+            <div class="component-showcase">
+                <div class="button-showcase">
+                    <button class="btn btn-primary">Primary Button</button>
+                    <button class="btn btn-secondary">Secondary Button</button>
+                    <button class="btn btn-accent">Accent Button</button>
+                    <button class="btn btn-primary btn-sm">Small Primary</button>
+                    <button class="btn btn-secondary btn-sm">Small Secondary</button>
+                    <button class="btn btn-accent btn-sm">Small Accent</button>
+                    <button class="btn btn-primary btn-lg">Large Primary</button>
+                    <button class="btn btn-secondary btn-lg">Large Secondary</button>
+                    <button class="btn btn-accent btn-lg">Large Accent</button>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title">🃏 Cards</h2>
+            <div class="component-showcase">
+                <div class="card-showcase">
+                    <div class="card">
+                        <img src="https://picsum.photos/seed/project1/400/200.jpg" alt="Project" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Mobile App Design</h3>
+                            <p class="card-description">A clean and intuitive mobile application design with focus on user experience and accessibility.</p>
+                            <div class="card-footer">
+                                <span class="text-caption">UI/UX Design</span>
+                                <button class="btn btn-primary btn-sm">View Project</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://picsum.photos/seed/project2/400/200.jpg" alt="Project" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Brand Identity</h3>
+                            <p class="card-description">Complete brand identity design including logo, color palette, and brand guidelines.</p>
+                            <div class="card-footer">
+                                <span class="text-caption">Branding</span>
+                                <button class="btn btn-primary btn-sm">View Project</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://picsum.photos/seed/project3/400/200.jpg" alt="Project" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Web Dashboard</h3>
+                            <p class="card-description">Modern dashboard interface with data visualization and responsive design.</p>
+                            <div class="card-footer">
+                                <span class="text-caption">Web Design</span>
+                                <button class="btn btn-primary btn-sm">View Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title">📝 Form Elements</h2>
+            <div class="component-showcase">
+                <form style="max-width: 600px;">
+                    <div class="form-group">
+                        <label class="form-label">Name</label>
+                        <input type="text" class="form-input" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-input" placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Message</label>
+                        <textarea class="form-textarea" placeholder="Your message here..."></textarea>
+                    </div>
+                    <div style="display: flex; gap: var(--space-md);">
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <button type="button" class="btn btn-secondary">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title">📏 Spacing System</h2>
+            <div class="component-showcase">
+                <div class="spacing-showcase">
+                    <div class="spacing-box" style="width: var(--space-xs); height: 20px;">XS</div>
+                    <span>4px - 0.25rem</span>
+                </div>
+                <div class="spacing-showcase">
+                    <div class="spacing-box" style="width: var(--space-sm); height: 20px;">SM</div>
+                    <span>8px - 0.5rem</span>
+                </div>
+                <div class="spacing-showcase">
+                    <div class="spacing-box" style="width: var(--space-md); height: 20px;">MD</div>
+                    <span>16px - 1rem</span>
+                </div>
+                <div class="spacing-showcase">
+                    <div class="spacing-box" style="width: var(--space-lg); height: 20px;">LG</div>
+                    <span>24px - 1.5rem</span>
+                </div>
+                <div class="spacing-showcase">
+                    <div class="spacing-box" style="width: var(--space-xl); height: 20px;">XL</div>
+                    <span>32px - 2rem</span>
+                </div>
+                <div class="spacing-showcase">
+                    <div class="spacing-box" style="width: var(--space-2xl); height: 20px;">2XL</div>
+                    <span>48px - 3rem</span>
+                </div>
+                <div class="spacing-showcase">
+                    <div class="spacing-box" style="width: var(--space-3xl); height: 20px;">3XL</div>
+                    <span>64px - 4rem</span>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
