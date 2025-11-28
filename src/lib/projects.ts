@@ -75,20 +75,20 @@ export const featuredProjects: Project[] = [
   },
   {
     id: 4,
-    title: "E-commerce Platform",
+    title: "Web Development",
     category: "Web Design",
-    description: "Responsive e-commerce website with modern design and optimized user experience for conversions and sales.",
+    description: "Responsive e-commerce website with modern design",
     image: "https://picsum.photos/seed/ecommerce/600/400.jpg",
     tags: ["Web", "E-commerce", "Responsive"],
     details: {
-      client: "Fashion Forward",
-      duration: "10 weeks",
+      client: "Personal Project",
+      duration: "5 weeks",
       role: "Web Designer",
-      tools: ["Figma", "Webflow", "Adobe Creative Suite"],
-      overview: "Designed and developed a modern e-commerce platform focused on user experience and conversion optimization.",
-      challenges: "Creating a seamless shopping experience across devices while maintaining brand identity and handling complex product variations.",
-      solution: "Designed a clean, product-focused interface with intuitive navigation, implemented advanced filtering system, and created engaging product detail pages.",
-      results: "Conversion rate increased by 45% and average session duration improved by 60%."
+      tools: ["VSCode, GitHub, Vercel, AI"],
+      overview: "Designed and developed a website for myself to showcase my portfolio and work.",
+      challenges: "Learning how to use AI tools in web development and how to edit the code myself after generating it.",
+      solution: "Designed a clean, and minimalist website to showcase my work effectively. Used AI tools to generate code snippest and then edited them to fit my needs.",
+    
     }
   },
   {
@@ -99,68 +99,65 @@ export const featuredProjects: Project[] = [
     image: "https://picsum.photos/seed/social/600/400.jpg",
     tags: ["Social Media", "Campaign", "Marketing"],
     details: {
-      client: "TechGadgets Inc.",
-      duration: "4 weeks",
+      client: "Hypothetical- TEA BETTER- existing brand",
+      duration: "3 weeks",
       role: "Digital Marketing Designer",
-      tools: ["Adobe Creative Suite", "Canva", "Hootsuite"],
-      overview: "Developed comprehensive social media campaign for new product launch across multiple platforms.",
-      challenges: "Creating cohesive visual identity across different social media platforms while adapting content to each platform's unique requirements.",
-      solution: "Designed platform-specific templates, created engaging motion graphics, and developed content calendar with strategic posting schedule.",
-      results: "Campaign reached 2M+ impressions, engagement rate of 8.5%, and contributed to 30% increase in product sales."
+      tools: ["Adobe Creative Suite", "AI"],
+      overview: "Developed comprehensive social media campaign for promoting their existing products accross all platforms.",
+      challenges: "Creating cohesive visual identity across different social media platforms while adapting content to each platform's unique requirements. Also Making people Aware of the brand and its products.",
+      solution: "Designed platform-specific templates, took engaging images and video, and developed content calendar with strategic posting schedule.",
+    
     }
   },
   {
     id: 6,
-    title: "Mobile Game Interface",
+    title: "Game Designing",
     category: "Game Design",
-    description: "User interface design for a mobile puzzle game including menus, HUD elements, and interactive components.",
+    description: "Participated in a Global Game Jam to design a board game around the theme",
     image: "https://picsum.photos/seed/game/600/400.jpg",
-    tags: ["Game", "Mobile", "UI"],
+    tags: ["Game", "Board game design", "Adobe Photoshop"],
     details: {
-      client: "PuzzleMind Studios",
-      duration: "6 weeks",
-      role: "Game UI Designer",
-      tools: ["Figma", "Unity", "Adobe After Effects"],
-      overview: "Designed intuitive and engaging user interface for a mobile puzzle game targeting casual gamers.",
-      challenges: "Creating an interface that is both visually appealing and highly functional for quick gaming sessions on mobile devices.",
-      solution: "Designed clean, accessible UI with clear visual hierarchy, implemented satisfying micro-interactions, and created thematic visual elements.",
-      results: "Game received 4.8/5 star rating and user retention increased by 40% after UI implementation."
+      client: "Personal Project",
+      duration: "3 days- Global Game Jam event",
+      role: "Game Designer",
+      tools: ["Skecthing", "Ideating", "Photoshop", "Hands on"],
+      overview: "Designed intuitive and engaging board game for a game jam event.",
+      challenges: "Creating a game which is sticking to the theme as well as engaging and fun to play within a lmited time frame.",
+      solution: ""
     }
   },
   {
     id: 7,
     title: "Personal Photography Portfolio",
     category: "Personal Projects",
-    description: "Personal project showcasing photography skills with custom website design and curated photo galleries.",
+    description: "Personal project showcasing some photography I have done out of interest.",
     image: "https://picsum.photos/seed/photo/600/400.jpg",
-    tags: ["Personal", "Photography", "Portfolio"],
+    tags: ["Personal", "Photography"],
     details: {
       client: "Personal Project",
-      duration: "Ongoing",
-      role: "Designer & Photographer",
-      tools: ["Adobe Lightroom", "Adobe Photoshop", "Webflow"],
-      overview: "Personal photography portfolio showcasing urban exploration and nature photography with custom web design.",
-      challenges: "Creating an immersive viewing experience that highlights photography while maintaining fast loading times and mobile responsiveness.",
-      solution: "Designed minimalist gallery interface with full-screen viewing options, implemented optimized image delivery, and created curated collections.",
-      results: "Portfolio received 10K+ monthly visitors and featured in several online design publications."
+      duration: "Always Ongoing",
+      role: "Photographer",
+      tools: ["One camera"],
+      overview: "Personal photography showcasing urban exploration and nature photography",
+      challenges: "Creating an immersive viewing experience that highlights my photography interest.",
+      solution: ""
     }
   },
   {
     id: 8,
     title: "Calligraphy & Font Making",
     category: "Typography",
-    description: "Personal exploration of calligraphy and custom font design, blending traditional techniques with modern typography principles.",
+    description: "Personal exploration of calligraphy and custom font design, blending traditional techniques to come up with a unique typeface.",
     image: "https://picsum.photos/seed/calligraphy/600/400.jpg",
     tags: ["Calligraphy", "Font Design", "Typography"],
     details: {
       client: "Personal Project",
-      duration: "6 weeks",
+      duration: "5 weeks",
       role: "Calligrapher & Font Designer",
-      tools: ["Adobe Illustrator", "Glyphs", "FontLab", "Procreate"],
-      overview: "A personal journey into the art of calligraphy and font making, exploring the delicate balance between traditional brush techniques and modern digital typography. This project involved extensive research into historical scripts and contemporary font design principles.",
+      tools: ["Practical Work", "Glyphs", "FontLab"],
+      overview: "A personal journey into the art of calligraphy and font making, exploring the delicate balance between traditional brush techniques and new modern styles.",
       challenges: "Mastering the technical aspects of font creation while maintaining the organic, hand-drawn quality of calligraphy. Ensuring consistency across hundreds of glyphs while preserving the natural flow and character of hand-drawn letterforms.",
-      solution: "Developed a systematic approach combining traditional calligraphy practice with digital font creation tools. Created extensive guidelines and character sets while experimenting with different brush techniques and digital refinements.",
-      results: "Successfully created a functional custom font with over 200 glyphs, including uppercase, lowercase, numbers, and special characters. The font maintains the authentic feel of hand-drawn calligraphy while being fully usable in digital applications."
+      solution: ""
     }
   }
 ];
