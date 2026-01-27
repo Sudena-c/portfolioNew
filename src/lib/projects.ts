@@ -70,7 +70,7 @@ export const featuredProjects: Project[] = [
       overview: "Designed a coffee table book celebrating Vinyl — an ancient yet timeless medium. The book explores its enduring relevance, the intricate process of record-making, its cultural history, and the emotion it continues to evoke today.",
       challenges: "The main challenge was curating only the most meaningful content while maintaining depth — balancing storytelling with restraint. Selecting imagery that perfectly captured the theme and character of 'ancient yet evergreen' required thoughtful exploration and precision.",
       solution: "Created a visually rich, cohesive book where every image, layout, and detail harmonized to reflect the essence of vinyl: nostalgic, timeless, and beautifully crafted.",
-      results: "The outcome was a visually rich, cohesive book — where every image, layout, and detail harmonized to reflect the essence of vinyl: nostalgic, timeless, and beautifully crafted."
+      results: "A visually rich, cohesive book — where every image, layout, and detail harmonized to reflect the essence of vinyl: nostalgic, timeless, and beautifully crafted."
     }
   },
   {
@@ -78,7 +78,7 @@ export const featuredProjects: Project[] = [
     title: "Web Development",
     category: "Web Design",
     description: "Responsive e-commerce website with modern design",
-    image: "https://picsum.photos/seed/ecommerce/600/400.jpg",
+    image: "web development.jpg",
     tags: ["Web", "E-commerce", "Responsive"],
     details: {
       client: "Personal Project",
