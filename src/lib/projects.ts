@@ -78,7 +78,7 @@ export const featuredProjects: Project[] = [
     title: "Web Development",
     category: "Web Design",
     description: "Responsive e-commerce website with modern design",
-    image: "web development.jpg",
+    image: "web development.jpg ",
     tags: ["Web", "E-commerce", "Responsive"],
     details: {
       client: "Personal Project",
