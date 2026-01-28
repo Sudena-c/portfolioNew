@@ -17,7 +17,7 @@ export default function Home() {
   const featuredProjects = [
     {
       id: 1,
-      title: "Brand Identity System",
+      title: "Brand Identity Systems",
       category: "Branding",
       description: "Complete brand identity and system for an electric car company specializing in compact, smart vehicles for city use.",
       image: "https://z-cdn-media.chatglm.cn/files/0e0ca0ce-f71d-48a3-855c-dcf9d08279f3_branding%20billboard.jpg?auth_key=1791345399-c902344fe15346e6a271a338562efade-0-480bd33acc335a53634993f909351e92",
